@@ -25,7 +25,7 @@ class SimpleNumericalOperations {
         int a = 10;
         int b = 20;
         int result = add(a, b);
-        assertEquals(isPositive(result), true);
+        assertEquals(result, 30);
     }
 
     @Test
@@ -33,7 +33,8 @@ class SimpleNumericalOperations {
         assertAll(
                 () -> assertEquals(true, isNegative(-1)),
                 () -> assertEquals(false, isPositive(-13)),
-                () -> assertEquals(true, isPositive(add(-12,13))
-        ));
+                () -> assertEquals(true, isPositive(add(-12,13))),
+                () -> assertEquals(false, isPositive(-13))
+        );
     }
 }
